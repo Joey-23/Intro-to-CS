@@ -2,7 +2,6 @@ puts 'Enter a number to turn it into an OldRomanNumeral.'
 
 def roman_numeral number
 
-    number = gets.chomp
     array = number.scan /\w/
 
     new_number = array[-1].to_i % 5
@@ -14,7 +13,7 @@ def roman_numeral number
       variable_I = 'I' * new_number
     end
 
-    if array[-1].to_i >= 5 && array[-1].to_i < 10
+    if array[-1].to_i >= 5
       variable_V = 'V'
     end
 
@@ -22,7 +21,7 @@ def roman_numeral number
       variable_X = 'X' * new_number1
     end
 
-    if array[-2].to_i >= 5 && array[-2].to_i < 10
+    if array[-2].to_i >= 5
       variable_L = 'L'
     end
 
@@ -30,7 +29,7 @@ def roman_numeral number
       variable_C = 'C' * new_number2
     end
 
-    if array[-3].to_i >= 5 && array[-3].to_i < 10
+    if array[-3].to_i >= 5
       variable_D = 'D'
     end
 
@@ -42,4 +41,9 @@ def roman_numeral number
 
 end
 
-roman_numeral 'hello?'
+roman_numeral '9'
+roman_numeral '4003'
+roman_numeral '2107'
+roman_numeral '2017'
+roman_numeral '1989'
+roman_numeral '1536'
